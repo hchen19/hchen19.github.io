@@ -1,0 +1,16 @@
+{{ $colorMap := dict "/research/scalable-gp/" "#0b5394" "/research/bayesian-dl/" "#6a1b9a" "/research/data-assimilation/" "#b45f04" "/research/real-applications/" "#0e6655" }}
+{{ $order := slice "/research/scalable-gp/" "/research/bayesian-dl/" "/research/data-assimilation/" "/research/real-applications/" }}
+<ul style="font-size:0.95em; line-height:1.6em; padding-left:1.2em;">
+  {{ range $order }}
+    {{ with site.GetPage . }}
+      <li style="margin-bottom:0.8em;">
+        <strong><a href="{{ .RelPermalink }}" style="color:{{ index $colorMap .RelPermalink }};">
+          {{ .Title }}
+        </a></strong>
+        <div style="margin-top:0.25em; color:#444; font-size:0.9em;">
+          {{ with .Params.summary }}{{ . | markdownify }}{{ else }}{{ .Summary | markdownify }}{{ end }}
+        </div>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>

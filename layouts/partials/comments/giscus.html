@@ -1,0 +1,20 @@
+{{ $comment := .Site.Params.features.comment | default dict }}
+{{ $giscus := $comment.giscus | default dict }}
+{{ if and $giscus.repo $giscus.repo_id $giscus.category $giscus.category_id }}
+<script src="https://giscus.app/client.js"
+  data-repo="{{ $giscus.repo }}"
+  data-repo-id="{{ $giscus.repo_id }}"
+  data-category="{{ $giscus.category }}"
+  data-category-id="{{ $giscus.category_id }}"
+  data-mapping="{{ $giscus.mapping | default "pathname" }}"
+  data-strict="{{ $giscus.strict | default "0" }}"
+  data-reactions-enabled="{{ $giscus.reactions_enabled | default "1" }}"
+  data-emit-metadata="{{ $giscus.emit_metadata | default "0" }}"
+  data-theme="{{ $giscus.theme | default "preferred_color_scheme" }}"
+  data-lang="{{ $giscus.lang | default "en" }}"
+  crossorigin="anonymous"
+  async>
+</script>
+{{ else }}
+<p class="text-muted">Giscus requires `repo`, `repo_id`, `category`, and `category_id` in `features.comment.giscus`.</p>
+{{ end }}

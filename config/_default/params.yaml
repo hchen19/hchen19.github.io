@@ -1,0 +1,110 @@
+# SITE SETUP
+# Guide: https://docs.hugoblox.com/tutorial/
+# Documentation: https://docs.hugoblox.com/
+# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+
+# Appearance
+
+appearance:
+  theme_day: minimal
+  theme_night: minimal
+  font: minimal
+  font_size: L
+
+# SEO
+
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    org_name: ''
+    description: 'A highly-customizable Hugo academic resume theme powered by Hugo Blox Builder.'
+    twitter: 'GetResearchDev'
+  analytics:
+    google_analytics: ''
+    baidu_tongji: ''
+    google_tag_manager: ''
+    microsoft_clarity: ''
+  verification:
+    google: ''
+    baidu: ''
+
+# Site header
+
+header:
+  navbar:
+    enable: true
+    align: l
+    show_logo: true
+    show_language: false
+    show_day_night: true
+    show_search: true
+    highlight_active_link: true
+
+# Site footer
+
+footer:
+  copyright:
+    notice: '© {year} Haoyuan Chen'
+    license:
+      enable: false # true
+      allow_derivatives: false
+      share_alike: false #true
+      allow_commercial: false
+
+# Localization
+
+# locale:
+#   date_format: 'Jan 2, 2006'
+#   time_format: '3:04 PM'
+#   address_format: en-us
+
+# Site features
+
+features:
+  comment:
+    provider: 'giscus' # set '' for disable comments, or choose one of 'utterances', 'giscus'
+    utterances:
+      repo: hchen19/hchen19.github.io
+      issue_term: pathname
+      label: Comment
+      theme: preferred-color-scheme
+
+    giscus:
+      repo: 'hchen19/hchen19.github.io'
+      repo_id: "R_kgDOQX3_AA"
+      category: "Announcements"
+      category_id: "DIC_kwDOQX3_AM4Cx6y-"
+      mapping: pathname
+      strict: 0
+      reactions_enabled: 1
+      emit_metadata: 0
+      theme: preferred_color_scheme
+      lang: en
+    
+#   search:
+#     provider: wowchemy
+#     algolia:
+#       app_id: ''
+#       api_key: ''
+#       index_name: ''
+#       show_logo: false
+#   map:
+#     provider: 'mapnik'
+#     api_key: ''
+#     zoom: 15
+
+# Extensions
+
+extensions:
+  cms:
+    branch: main
+    local_backend: false
+  academicons:
+    enable: true
+
+# Security
+
+security:
+  # Allow frame for embedding speaker notes in slides
+  allow_frame: true

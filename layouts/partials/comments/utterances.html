@@ -1,0 +1,14 @@
+{{- $comment := site.Params.features.comment | default dict -}}
+{{- $utterances := $comment.utterances | default dict -}}
+{{- if $utterances.repo -}}
+<script src="https://utteranc.es/client.js"
+  data-repo="{{ $utterances.repo }}"
+  data-issue-term="{{ $utterances.issue_term | default "pathname" }}"
+  data-label="{{ $utterances.label | default "Comment" }}"
+  data-theme="{{ $utterances.theme | default "github-light" }}"
+  crossorigin="anonymous"
+  async>
+</script>
+{{- else -}}
+<p class="text-muted">Utterances needs a GitHub repository configured.</p>
+{{- end -}}

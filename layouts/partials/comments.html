@@ -1,0 +1,24 @@
+{{- /* Single provider comment rendering */ -}}
+{{- $page := . -}}
+{{- $commentable := $page.Params.commentable | default true -}}
+{{- if not $commentable -}}
+  {{- return -}}
+{{- end -}}
+
+{{- $comment := .Site.Params.features.comment | default dict -}}
+{{- $rawProvider := $comment.provider | default "" -}}
+{{- $provider := lower (trim (printf "%s" $rawProvider) " ") -}}
+{{- if not $provider -}}
+  {{- return -}}
+{{- end -}}
+
+{{- $partialPath := printf "partials/comments/%s.html" $provider -}}
+{{- if not (templates.Exists $partialPath) -}}
+  <p class="text-muted">The '{{ $provider }}' comment provider is not configured.</p>
+  {{- return -}}
+{{- end -}}
+
+<section id="comments" class="comments mt-5">
+  <h2 class="mb-3">{{ default "Comments" (i18n "comments") }}</h2>
+  {{- partial $partialPath $page -}}
+</section>
