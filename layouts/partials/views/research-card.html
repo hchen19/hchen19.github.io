@@ -1,0 +1,42 @@
+{{ $item := .item }}
+{{ $link := $item.RelPermalink }}
+{{ $colorMap := dict "Scalable Gaussian Processes" "#0b5394" "Bayesian Deep Learning" "#6a1b9a" "Data Assimilation" "#b45f04" "Real-World Applications" "#0e6655" }}
+
+<div style="margin-bottom: 1.5rem;" class="card">
+  {{ with $item.Resources.GetMatch "featured.*" }}
+    {{ $isVideo := eq .MediaType.Type "video" }}
+    <a href="{{ $link }}">
+      {{ if $isVideo }}
+        <video src="{{ .RelPermalink }}" aria-label="{{ $item.Title }}" muted loop playsinline autoplay style="max-height: 250px; object-fit: contain; object-position: center; width: 100%; border-radius: 8px; margin-bottom: 0.25rem;"></video>
+      {{ else }}
+        <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" style="max-height: 250px; object-fit: cover; object-position: center; width: 100%; border-radius: 8px; margin-bottom: 0.25rem;">
+      {{ end }}
+    </a>
+  {{ end }}
+  <div class="card-body">
+    <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; margin-top: 0;" class="card-title">
+      <a href="{{ $link }}" style="color:{{ index $colorMap $item.Title }}; text-decoration: none; font-weight: bold;">{{ $item.Title }}</a>
+    </h4>
+    <p style="font-size: 0.8rem; line-height: 1.5; color: #555; margin: 0;">
+      {{ $item.Summary }}
+    </p>
+  </div>
+</div>
+
+<!-- {{ $item := .item }}
+{{ $link := $item.RelPermalink }}
+{{ $colorMap := dict "Scalable Gaussian Processes" "#0b5394" "Bayesian Deep Learning" "#6a1b9a" "Data Assimilation" "#b45f04" "Real-World Applications" "#0e6655" }}
+
+<div class="card">
+  {{ with $item.Resources.GetMatch "featured.*" }}
+    <a href="{{ $link }}">
+      <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" class="card-img-top"  style="max-height: 250px; object-fit: cover; width: 100%; border-radius: 8px; margin-bottom: 0.75rem;">
+    </a>
+  {{ end }}
+  <div class="card-body">
+    <h4 class="card-title">
+      <a href="{{ $link }}" style="color:{{ index $colorMap $item.Title }};">{{ $item.Title }}</a>
+    </h4>
+    <p class="card-text">{{ $item.Summary }}</p>
+  </div>
+</div> -->

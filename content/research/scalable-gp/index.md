@@ -2,6 +2,7 @@
 title: Scalable Gaussian Processes
 summary: <a href="https://en.wikipedia.org/wiki/Gaussian_process" style="color:blue;">Gaussian processes</a> (GPs) confront significant computational bottlenecks, including the computation of the inversion and log-determinant of the covariance matrix, which limit their scalability to large datasets. These operations scale cubically with the number of data points, making standard GP inference computationally prohibitive for large datasets. Therefore, developing scalable methods for GPs is crucial to unlock their full potential for large-scale applications while preserving their desirable properties of uncertainty quantification and theoretical guarantees.
 show_date: false
+weight: 1
 ---
 
 

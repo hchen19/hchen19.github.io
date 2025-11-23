@@ -181,31 +181,156 @@ sections:
   #     columns: '2'
   #     view: card
 
+  # - block: markdown
+  #   id: research
+  #   content:
+  #     title: Research
+  #     subtitle: ''
+  #     text: |
+  #       <div style="line-height:1.5em; margin-bottom:35px;">
+  #         <h2 style="font-size:1.3em; margin-bottom:0.5em; font-weight:bold;">Research Overview</h2>
+  #         <p style="font-size:0.95em; line-height:1.6em;">
+  #           My research aims to develop scalable and robust <a href="https://en.wikipedia.org/wiki/Uncertainty_quantification" style="color:blue;">uncertainty quantification</a> (UQ) methods for <a style="color:red;">probabilistic machine learning</a>, with a particular focus on <a href="https://en.wikipedia.org/wiki/Gaussian_process" style="color:blue;">Gaussian processes</a> (GPs) and <a href="https://en.wikipedia.org/wiki/Bayesian_learning" style="color:blue;">Bayesian learning</a>.  I develop probabilistic models that bridge the gap between rigorous statistical inference and practical applications in large-scale data and high-dimensional problems.
+  #         </p>
+
+  #         <figure style="margin:25px 0; text-align:center;">
+  #           <object data="/uploads/research-overview.pdf#toolbar=0" type="application/pdf" width="100%" height="420" aria-label="Research overview framework"></object>
+  #           <figcaption style="font-size:0.85em; color:#555; margin-top:10px;">
+  #             Research Overview for Probabilistic Machine Learning.
+  #           </figcaption>
+  #         </figure>
+
+  #         <h2 style="font-size:1.3em; margin-bottom:0.5em; font-weight:bold;">Research Topics</h2>
+
+  #         {{< research_topics >}}
+  #       </div>
+  #   design:
+  #     columns: '2'
+  
+  
   - block: markdown
     id: research
     content:
-      title: Research
+      title: Research Overview
       subtitle: ''
       text: |
-        <div style="line-height:1.5em; margin-bottom:35px;">
-          <h2 style="font-size:1.3em; margin-bottom:0.5em; font-weight:bold;">Research Overview</h2>
-          <p style="font-size:0.95em; line-height:1.6em;">
-            My research aims to develop scalable and robust <a href="https://en.wikipedia.org/wiki/Uncertainty_quantification" style="color:blue;">uncertainty quantification</a> (UQ) methods for <a style="color:red;">probabilistic machine learning</a>, with a particular focus on <a href="https://en.wikipedia.org/wiki/Gaussian_process" style="color:blue;">Gaussian processes</a> (GPs) and <a href="https://en.wikipedia.org/wiki/Bayesian_learning" style="color:blue;">Bayesian learning</a>.  I develop probabilistic models that bridge the gap between rigorous statistical inference and practical applications in large-scale data and high-dimensional problems.
-          </p>
+        <p style="font-size:0.95em; line-height:1.6em;">
+          My research aims to develop scalable and robust <a href="https://en.wikipedia.org/wiki/Uncertainty_quantification" style="color:blue;">uncertainty quantification</a> (UQ) methods for <a style="color:red;">probabilistic machine learning</a>, with a particular focus on <a href="https://en.wikipedia.org/wiki/Gaussian_process" style="color:blue;">Gaussian processes</a> (GPs) and <a href="https://en.wikipedia.org/wiki/Bayesian_learning" style="color:blue;">Bayesian learning</a>.  I develop probabilistic models that bridge the gap between rigorous statistical inference and practical applications in large-scale data and high-dimensional problems.
+        </p>
 
-          <figure style="margin:25px 0; text-align:center;">
-            <object data="/uploads/research-overview.pdf#toolbar=0" type="application/pdf" width="100%" height="420" aria-label="Research overview framework"></object>
-            <figcaption style="font-size:0.85em; color:#555; margin-top:10px;">
-              Research Overview for Probabilistic Machine Learning.
-            </figcaption>
-          </figure>
-
-          <h2 style="font-size:1.3em; margin-bottom:0.5em; font-weight:bold;">Research Topics</h2>
-
-          {{< research_topics >}}
-        </div>
+        <figure style="margin:25px 0; text-align:center;">
+          <object data="/uploads/research-overview.pdf#toolbar=0" type="application/pdf" width="100%" height="420" aria-label="Research overview framework"></object>
+          <figcaption style="font-size:0.85em; color:#555; margin-top:10px;">
+            Research Overview for Probabilistic Machine Learning.
+          </figcaption>
+        </figure>
     design:
       columns: '2'
+
+  - block: collection
+    id: research
+    content:
+      title: Research Topics
+      subtitle: ''
+      text: ''
+      filters:
+        folders:
+          - research
+        exclude_featured: false
+        sort_by: weight
+    design:
+      columns: '2'
+      view: research-card # research-card, masonry, card, compact, showcase, citation, list, numbered
+      flip_alt_rows: false # For Showcase view, flip alternate rows?
+
+
+  # - block: markdown
+  #   id: research
+  #   content:
+  #     title: Research
+  #     subtitle: ''
+  #     text: |
+  #       <div style="max-width:1100px; margin:0 auto;">
+  #         <div style="margin-bottom:40px;">
+  #           <h2 style="font-size:1.3em; margin-bottom:0.5em; font-weight:bold;">Research Overview</h2>
+  #           <p style="font-size:0.95em; line-height:1.6em;">
+  #             My research aims to develop scalable and robust <a href="https://en.wikipedia.org/wiki/Uncertainty_quantification" style="color:blue;">uncertainty quantification</a> (UQ) methods for <a style="color:red;">probabilistic machine learning</a>, with a particular focus on <a href="https://en.wikipedia.org/wiki/Gaussian_process" style="color:blue;">Gaussian processes</a> (GPs) and <a href="https://en.wikipedia.org/wiki/Bayesian_learning" style="color:blue;">Bayesian learning</a>.  I develop probabilistic models that bridge the gap between rigorous statistical inference and practical applications in large-scale data and high-dimensional problems.
+  #           </p>
+  #           <figure style="margin:25px auto; text-align:center; max-width:1000px;">
+  #             <object data="/uploads/research-overview.pdf#toolbar=0" type="application/pdf" width="100%" height="550" aria-label="Research overview framework"></object>
+  #             <figcaption style="font-size:0.85em; color:#555; margin-top:10px;">
+  #               Research Overview for Probabilistic Machine Learning.
+  #             </figcaption>
+  #           </figure>
+  #         </div>
+  #         <div style="margin-top:50px;">
+  #           <h2 style="font-size:1.3em; margin-bottom:1.2em; font-weight:bold;">Research Topics</h2>
+  #           <div style="display:grid; grid-template-columns:420px 1fr; gap:20px; margin-bottom:30px; align-items:start;">
+  #             <div style="width:100%; min-height:150px;">
+  #               <a href="/research/scalable-gp/">
+  #                 <img src="/research/scalable-gp/featured.jpg" alt="Scalable Gaussian Processes" style="width:100%; height:auto; border-radius:8px; object-fit:cover;" onerror="this.style.display='none'">
+  #               </a>
+  #             </div>
+  #             <div>
+  #               <h3 style="margin-top:0; margin-bottom:0.5em;">
+  #                 <a href="/research/scalable-gp/" style="color:#0b5394; text-decoration:none; font-weight:bold;">Scalable Gaussian Processes</a>
+  #               </h3>
+  #               <p style="font-size:0.9em; line-height:1.6em; color:#444; margin:0;">
+  #                 <a href="https://en.wikipedia.org/wiki/Gaussian_process" style="color:blue;">Gaussian processes</a> (GPs) confront significant computational bottlenecks, including the computation of the inversion and log-determinant of the covariance matrix, which limit their scalability to large datasets. These operations scale cubically with the number of data points, making standard GP inference computationally prohibitive for large datasets. Therefore, developing scalable methods for GPs is crucial to unlock their full potential for large-scale applications while preserving their desirable properties of uncertainty quantification and theoretical guarantees.
+  #               </p>
+  #             </div>
+  #           </div>
+  #           <div style="display:grid; grid-template-columns:420px 1fr; gap:20px; margin-bottom:30px; align-items:start;">
+  #             <div style="width:100%; min-height:150px;">
+  #               <a href="/research/bayesian-dl/">
+  #                 <img src="/research/bayesian-dl/featured.jpg" alt="Bayesian Deep Learning" style="width:100%; height:auto; border-radius:8px; object-fit:cover;" onerror="this.style.display='none'">
+  #               </a>
+  #             </div>
+  #             <div>
+  #               <h3 style="margin-top:0; margin-bottom:0.5em;">
+  #                 <a href="/research/bayesian-dl/" style="color:#6a1b9a; text-decoration:none; font-weight:bold;">Bayesian Deep Learning</a>
+  #               </h3>
+  #               <p style="font-size:0.9em; line-height:1.6em; color:#444; margin:0;">
+  #                 <a href="https://openreview.net/pdf?id=PrmxFWI1Fr" style="color:blue;">Bayesian deep learning</a> (BDL) is a computational framework that combines Bayesian inference principles with deep learning models, offering potential to advance the current AI landscape by providing principled uncertainty quantification and improved robustness. However, BDL faces significant challenges including computational intractability due to the high-dimensional parameter spaces in neural networks, and the tendency toward overconfidence or miscalibration in posterior approximations. Therefore, addressing these computational and reliability issues is essential to make BDL practical and trustworthy in safety-critical applications.
+  #               </p>
+  #             </div>
+  #           </div>
+  #           <div style="display:grid; grid-template-columns:420px 1fr; gap:20px; margin-bottom:30px; align-items:start;">
+  #             <div style="width:100%; min-height:150px;">
+  #               <a href="/research/data-assimilation/">
+  #                 <img src="/research/data-assimilation/featured.jpg" alt="Data Assimilation" style="width:100%; height:auto; border-radius:8px; object-fit:cover;" onerror="this.style.display='none'">
+  #               </a>
+  #             </div>
+  #             <div>
+  #               <h3 style="margin-top:0; margin-bottom:0.5em;">
+  #                 <a href="/research/data-assimilation/" style="color:#b45f04; text-decoration:none; font-weight:bold;">Data Assimilation</a>
+  #               </h3>
+  #               <p style="font-size:0.9em; line-height:1.6em; color:#444; margin:0;">
+  #                 <a href="https://en.wikipedia.org/wiki/Data_assimilation" style="color:blue;">Data assimilation</a> (DA) combines dynamical models with sparse, noisy observations to estimate latent system states and quantify uncertainty for applications such as climate forecasting and environmental monitoring. In practice, traditional DA methods face severe challenges due to high-dimensional state spaces, nonlinear and possibly chaotic dynamics, model error arising from imperfect physical representations, and non-Gaussian uncertainties. Therefore, it is crucial to develop efficient and robust DA algorithms that can handle high-dimensional systems while properly accounting for model uncertainties for complex dynamical systems.
+  #               </p>
+  #             </div>
+  #           </div>
+  #           <div style="display:grid; grid-template-columns:420px 1fr; gap:20px; margin-bottom:30px; align-items:start;">
+  #             <div style="width:100%; min-height:150px;">
+  #               <a href="/research/real-applications/">
+  #                 <img src="/research/real-applications/featured.jpg" alt="Real-World Applications" style="width:100%; height:auto; border-radius:8px; object-fit:cover;" onerror="this.style.display='none'">
+  #               </a>
+  #             </div>
+  #             <div>
+  #               <h3 style="margin-top:0; margin-bottom:0.5em;">
+  #                 <a href="/research/real-applications/" style="color:#0e6655; text-decoration:none; font-weight:bold;">Real-World Applications</a>
+  #               </h3>
+  #               <p style="font-size:0.9em; line-height:1.6em; color:#444; margin:0;">
+  #                 When applying probabilistic models to real-world problems, data complexities such as non-stationarity and heteroscedasticity can significantly degrade model performance and lead to unreliable uncertainty estimates. Non-stationarity arises when statistical properties vary across the input space, while heteroscedasticity reflects non-uniform noise levels in different regions. Therefore, it is essential to design probabilistic models and inference algorithms that explicitly handle these challenges so that the resulting systems remain robust, interpretable, and trustworthy in practical applications.
+  #               </p>
+  #             </div>
+  #           </div>
+  #         </div>
+  #       </div>
+  #   design:
+  #     columns: '1'
+  
+    
 
   - block: collection
     id: featured
