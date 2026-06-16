@@ -56,7 +56,7 @@ featured: true
 url_pdf: 'https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS004188'
 url_code: 'https://github.com/vishwas1984/SINDy_RealData'
 url_dataset: 'http://www.bom.gov.au/climate/mjo/graphics/rmm.74toRealtime.txt'
-url_poster: 'https://neurips.cc/media/PosterPDFs/NeurIPS%202023/76870.png?t=1701233276.3568919'
+url_poster: ''
 url_project: 'https://gp-mjo.github.io/'
 url_slides: ''
 url_source: ''

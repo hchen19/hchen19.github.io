@@ -3,6 +3,7 @@
 {{ $colorMap := dict "Scalable Gaussian Processes" "#0b5394" "Bayesian Deep Learning" "#6a1b9a" "Data Assimilation" "#b45f04" "Real-World Applications" "#0e6655" }}
 
 <div style="margin-bottom: 1.5rem;" class="card">
+  {{/* Featured image/video hidden — show text only
   {{ with $item.Resources.GetMatch "featured.*" }}
     {{ $isVideo := eq .MediaType.Type "video" }}
     <a href="{{ $link }}">
@@ -13,6 +14,7 @@
       {{ end }}
     </a>
   {{ end }}
+  */}}
   <div class="card-body">
     <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; margin-top: 0;" class="card-title">
       <a href="{{ $link }}" style="color:{{ index $colorMap $item.Title }}; text-decoration: none; font-weight: bold;">{{ $item.Title }}</a>

@@ -8,7 +8,7 @@ author_notes:
 - ""
 - ""
 - ""
-date: "2025-10-14"
+date: "2026-04-03"
 doi: ""
 math: true
 
@@ -21,7 +21,7 @@ publishDate: "2025-10-14T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Technometrics 1-15"
+publication: "*Technometrics, 68*(2), 347–357"
 publication_short: Technometrics
 
 abstract: We propose a novel theoretical and methodological framework for Gaussian process regression subject to privacy constraints. The proposed method can be used when a data owner is unwilling to share a high-fidelity supervised learning model built from their data with the public due to privacy concerns. The key idea of the proposed method is to add synthetic noise to the data until the predictive variance of the Gaussian process model reaches a prespecified privacy level. The optimal covariance matrix of the synthetic noise is formulated in terms of semi-definite programming. We also introduce the formulation of privacy-aware solutions under continuous privacy constraints using kernel-based approaches, and study their theoretical properties. The proposed method is illustrated by considering a model that tracks the trajectories of satellites and a real application on a census dataset.

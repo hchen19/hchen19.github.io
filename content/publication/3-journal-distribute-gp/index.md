@@ -3,7 +3,7 @@ title: "Aggregation Models with Optimal Weights for Distributed Gaussian Process
 authors:
 - admin
 - Rui Tuo
-date: "2024-07-31T00:00:00Z"
+date: "2026-03-11T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -12,11 +12,13 @@ publishDate: "2024-12-01T00:00:00Z"
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article"]
+publication_types: ["article-journal"]
 
+publication: "*Journal of Advances in Modeling Earth Systems , 17*(5)"
+publication_short: Journal of Advances in Modeling Earth Systems (JAMES)
 # Publication name and optional abbreviated publication name.
-publication: Preprint
-publication_short: ""
+publication: "IISE Transactions, 1–15"
+publication_short: "IISE Transactions"
 
 abstract: GP models have received increasingly attentions in recent years due to their super prediction accuracy and modeling flexibility. To address the computational burdens of GP models for large-scale datasets, distributed learning for GPs are often adopted Current aggregation models for distributed GPs are not time-efficient when incorporating correlations between GP experts. In this work, we propose a novel approach for aggregated prediction in distributed GPs. The technique is suitable for both the exact and sparse variational GPs. The proposed method incorporates correlations among experts, leading to better prediction accuracy with manageable computational requirements. As demonstrated by empirical studies, the proposed approach results in more stable predictions in less time than state-of-the-art consistent aggregation models.
 
@@ -33,8 +35,8 @@ featured: false
 links:
 # - name: Custom Link
 #   url: http://example.org
-url_pdf: https://arxiv.org/pdf/2408.00955
-url_code: ''
+url_pdf: https://www.tandfonline.com/doi/full/10.1080/24725854.2026.2637908
+url_code: 'https://github.com/hchen19/optimal-distgp'
 url_dataset: ''
 url_poster: ''
 url_project: ''

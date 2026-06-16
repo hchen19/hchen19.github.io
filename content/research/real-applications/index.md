@@ -2,6 +2,8 @@
 title: Real-World Applications
 summary: When applying probabilistic models to real-world problems, data complexities such as non-stationarity and heteroscedasticity can significantly degrade model performance and lead to unreliable uncertainty estimates. Non-stationarity arises when statistical properties vary across the input space, while heteroscedasticity reflects non-uniform noise levels in different regions. Therefore, it is essential to design probabilistic models and inference algorithms that explicitly handle these challenges so that the resulting systems remain robust, interpretable, and trustworthy in practical applications.
 show_date: false
+image:
+  preview_only: true
 weight: 4
 ---
 
