@@ -27,7 +27,7 @@ tags:
 - data assimilation
 - ensemble filtering
 - flow matching
-featured: true
+featured: false
 
 links:
 # - name: Custom Link
