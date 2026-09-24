@@ -7,4 +7,6 @@ image:
 weight: 3
 ---
 
-Coming soon.
+
+- **[Flow Ensemble Filter](/publication/6-preprint-flowef/)** proposes 
+a learned nonlinear analysis update that augments a classical ensemble filter by transporting the forecast ensemble from a classical baseline filter to an analysis ensemble using conditional flow matching. It uses a localized Gaussian source during training, transports forecast ensemble members from a baseline filter at deployment, and conditions its velocity field on ensembles from that baseline filter and the observation. The proposed model therefore learns a nonlinear update while mapping each baseline ensemble independently. 
